@@ -6,7 +6,10 @@ const morgan = require("morgan");
 
 const app = express();
 const port = process.env.PORT || 5050;
-app.use(cors());
+app.use(cors({
+    origin:process.env.CORS_ORIGIN,
+    credentials:true
+}))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
