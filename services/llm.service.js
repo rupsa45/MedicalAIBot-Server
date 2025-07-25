@@ -2,7 +2,7 @@ const { ChatOpenAI } = require("@langchain/openai");
 const { SystemMessage } = require("@langchain/core/messages");
 
 const llm = new ChatOpenAI({
-  modelName: "google/gemini-2.0-flash-exp:free",
+  // modelName: "google/gemini-2.0-flash-exp:free",
   openAIApiKey: process.env.OPENAI_API_KEY,
   configuration: {
     baseURL: "https://openrouter.ai/api/v1",
